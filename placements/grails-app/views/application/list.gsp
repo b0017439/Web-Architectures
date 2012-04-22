@@ -26,7 +26,7 @@
 					
 						<g:sortableColumn property="placement" title="${message(code: 'application.placement.label', default: 'Placement')}" />
 					
-						<g:sortableColumn property="status" title="${message(code: 'application.status.label', default: 'Status')}" />
+						<th><g:message code="application.status.label" default="Status" /></th>
 					
 						<g:sortableColumn property="student" title="${message(code: 'application.student.label', default: 'Student')}" />
 					

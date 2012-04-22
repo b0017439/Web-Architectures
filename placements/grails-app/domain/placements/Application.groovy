@@ -4,7 +4,7 @@ class Application {
 
  String student
  String placement
- String status
+ Status status
  long timestamp = System.currentTimeMillis()
 
     static constraints = {

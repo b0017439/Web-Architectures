@@ -10,12 +10,12 @@
 	<g:textField name="placement" value="${applicationInstance?.placement}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'status', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'status', 'error')} required">
 	<label for="status">
 		<g:message code="application.status.label" default="Status" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="status" value="${applicationInstance?.status}"/>
+	<g:select id="status" name="status.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.status?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'student', 'error')} ">
