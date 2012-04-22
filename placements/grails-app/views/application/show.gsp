@@ -50,14 +50,7 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${applicationInstance?.timestamp}">
-				<li class="fieldcontain">
-					<span id="timestamp-label" class="property-label"><g:message code="application.timestamp.label" default="Timestamp" /></span>
-					
-						<span class="property-value" aria-labelledby="timestamp-label"><g:fieldValue bean="${applicationInstance}" field="timestamp"/></span>
-					
-				</li>
-				</g:if>
+				
 			
 			</ol>
 			<g:form>

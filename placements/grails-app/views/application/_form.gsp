@@ -15,7 +15,7 @@
 		<g:message code="application.status.label" default="Status" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="status" name="status.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.status?.id}" class="many-to-one"/>
+	<g:select id="status" name="status.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.status?.description}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'student', 'error')} ">
@@ -26,11 +26,5 @@
 	<g:textField name="student" value="${applicationInstance?.student}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'timestamp', 'error')} required">
-	<label for="timestamp">
-		<g:message code="application.timestamp.label" default="Timestamp" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="number" name="timestamp" required="" value="${fieldValue(bean: applicationInstance, field: 'timestamp')}"/>
-</div>
+
 

@@ -30,7 +30,7 @@
 					
 						<g:sortableColumn property="student" title="${message(code: 'application.student.label', default: 'Student')}" />
 					
-						<g:sortableColumn property="timestamp" title="${message(code: 'application.timestamp.label', default: 'Timestamp')}" />
+						
 					
 					</tr>
 				</thead>
