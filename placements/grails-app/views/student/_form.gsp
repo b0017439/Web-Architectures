@@ -2,13 +2,7 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'applications', 'error')} ">
-	<label for="applications">
-		<g:message code="student.applications.label" default="Applications" />
-		
-	</label>
-	<g:textField name="applications" value="${studentInstance?.applications}"/>
-</div>
+
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courseCode', 'error')} ">
 	<label for="courseCode">
