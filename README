@@ -1,4 +1,38 @@
-This is my Web Architectures project for Assignment 3.
-put commands here that explain how to build my project 
+To see the project you need to clone it.
+
+This can be done by using the command:
+git clone git@github.com:b0017439/Web-Architectures.git
+
+How to build the placements application
+In the terminal change into the correct directory using:
+cd Web-Architectures/placements
+
+To run the app you need to use the command:
+grails run-app
+
+To test the application you can use the following link:
+/placements/apply
+add the test data from the following choices
+StudentID: Jen, Jim or Sarah
+Placement: Software Engineer, Network Engineer or Computer Programmer
+
+To check the list of applicants in JSON use the following link:
+/placements/placementOpportunity/listApplicants.json?id=2
+
+The ID on the end can be changed to either 1,2 or 3.
+
+To check the list of applicants in XML use the following link:
+/placements/placementOpportunity/listApplicants.xml?id=2
+
+The ID on the end can be changed to either 1,2 or 3.
+
+To check the open placements use the following link for json:
+/placements/placementOpportunity/listOpenPlacements.json
+
+To check the open placements use the following link for xml:
+/placements/placementOpportunity/listOpenPlacements.xml
+
+
+
 
 
