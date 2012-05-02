@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="placement-label" class="property-label"><g:message code="application.placement.label" default="Placement" /></span>
 					
-						<span class="property-value" aria-labelledby="placement-label"><g:fieldValue bean="${applicationInstance}" field="placement"/></span>
+						<span class="property-value" aria-labelledby="placement-label"><g:link controller="placementOpportunity" action="show" id="${applicationInstance?.placement?.id}">${applicationInstance?.placement?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -45,12 +45,19 @@
 				<li class="fieldcontain">
 					<span id="student-label" class="property-label"><g:message code="application.student.label" default="Student" /></span>
 					
-						<span class="property-value" aria-labelledby="student-label"><g:fieldValue bean="${applicationInstance}" field="student"/></span>
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${applicationInstance?.student?.id}">${applicationInstance?.student?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
 			
-				
+				<g:if test="${applicationInstance?.timestamp}">
+				<li class="fieldcontain">
+					<span id="timestamp-label" class="property-label"><g:message code="application.timestamp.label" default="Timestamp" /></span>
+					
+						<span class="property-value" aria-labelledby="timestamp-label"><g:fieldValue bean="${applicationInstance}" field="timestamp"/></span>
+					
+				</li>
+				</g:if>
 			
 			</ol>
 			<g:form>

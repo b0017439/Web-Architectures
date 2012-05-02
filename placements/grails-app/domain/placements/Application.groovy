@@ -2,8 +2,8 @@ package placements
 
 class Application {
 
- String student
- String placement
+ Student student
+ PlacementOpportunity placement
  Status status
  long timestamp = System.currentTimeMillis()
 

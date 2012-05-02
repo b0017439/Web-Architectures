@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'placement', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'placement', 'error')} required">
 	<label for="placement">
 		<g:message code="application.placement.label" default="Placement" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="placement" value="${applicationInstance?.placement}"/>
+	<g:select id="placement" name="placement.id" from="${placements.PlacementOpportunity.list()}" optionKey="id" required="" value="${applicationInstance?.placement?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'status', 'error')} required">
@@ -15,16 +15,22 @@
 		<g:message code="application.status.label" default="Status" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="status" name="status.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.status?.description}" class="many-to-one"/>
+	<g:select id="status" name="status.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.status?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'student', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'student', 'error')} required">
 	<label for="student">
 		<g:message code="application.student.label" default="Student" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="student" value="${applicationInstance?.student}"/>
+	<g:select id="student" name="student.id" from="${placements.Student.list()}" optionKey="id" required="" value="${applicationInstance?.student?.id}" class="many-to-one"/>
 </div>
 
-
+<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'timestamp', 'error')} required">
+	<label for="timestamp">
+		<g:message code="application.timestamp.label" default="Timestamp" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="number" name="timestamp" required="" value="${fieldValue(bean: applicationInstance, field: 'timestamp')}"/>
+</div>
 
